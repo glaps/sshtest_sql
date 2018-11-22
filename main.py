@@ -51,4 +51,5 @@ def main():
     out_name = "out_{}.xlsx".format(d2.strftime("%Y-%m-%d"))
     xlsx(incam,incam_name),xlsx(out,out_name)
     
-main()
+if __name__=="__main__":
+	main()
