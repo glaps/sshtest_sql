@@ -30,9 +30,8 @@ def xlsx(arr,path):
     wb.save(path)
 
 def pog(d):
-    dbsql = "dbname='asteriks' user='postgres' host='192.168.10.7' password='pstgres' port='8888'"
     try:
-        conn = psycopg2.connect(dbsql)
+        conn = psycopg2.connect(db_name)
         cur = conn.cursor()
         cur.execute(postgres.format(d.strftime("%Y%m%d")))
         q = cur.fetchall()
